@@ -23,3 +23,4 @@ make run
 - Automatic buffer expansion using realloc()
 - Proper memory cleanup using free()
 ---
+-----------
