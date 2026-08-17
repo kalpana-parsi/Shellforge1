@@ -22,4 +22,4 @@ make run
 - Memory allocation using malloc()
 - Automatic buffer expansion using realloc()
 - Proper memory cleanup using free()
-
+---
