@@ -8,7 +8,8 @@
 #include "../include/process.h"
 #include "../include/builtin.h"
 #include "../include/signals.h"
-#include "../include/pipes.h" 
+#include "../include/pipes.h"
+
 static void tokenize(char *str, char **argv)
 {
     int i = 0;
@@ -23,17 +24,22 @@ static void tokenize(char *str, char **argv)
 
     argv[i] = NULL;
 }
+
 int main()
 {
+
 char *line;
 char **tokens;
+
 initialize_signals();
+
+
 while(1)
 {
     printf("myshell> ");
     line = read_line();
 if (strchr(line, '|') != NULL)
-{
+        {
     char *argv1[64];
     char *argv2[64];
 
@@ -50,9 +56,12 @@ if (strchr(line, '|') != NULL)
     tokenize(right, argv2);
 
     execute_pipe(argv1, argv2);
-}
-else
-{
+
+            /*
+         * Parse pipeline
+             * Create argv1 and argv2
+             */
+        else
         {
     if(strcmp(line,"exit")==0)
     {
@@ -67,8 +76,5 @@ else
 }
 return 0;
 }
-}
-
-
 
 

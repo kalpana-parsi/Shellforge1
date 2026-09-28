@@ -8,7 +8,8 @@ src/input.c\
 src/parser.c\
 src/process.c\
 src/builtin.c\
-src/signals.c
+src/signals.c\
+src/pipes.c
 
 TARGET=bin/shellforge
 
