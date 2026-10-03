@@ -10,8 +10,6 @@
 #include "../include/signals.h"
 #include "../include/pipes.h" 
 #include "../include/redirect.h"
-#include "../include/thread.h"
-
 static void tokenize(char *str, char **argv)
 {
     int i = 0;
@@ -31,7 +29,6 @@ int main()
 char *line;
 char **tokens;
 initialize_signals();
-start_monitor_thread();
 while(1)
 {
     printf("myshell> ");
@@ -71,12 +68,11 @@ else
         	execute(tokens);
     	}
      }
-    free_tokens(tokens);
     free(line);
 }
 }
-}
 return 0;
+}
 }
 
 
