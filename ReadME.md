@@ -83,4 +83,14 @@ make run
 - Mutex synchronization
 - Race condition demonstration
 
+## Week 11 Features
+- TCP socket programming
+- Client-server communication
+- socket()
+- bind()
+- listen()
+- accept()
+- connect()
+- send()
+- recv()
 
